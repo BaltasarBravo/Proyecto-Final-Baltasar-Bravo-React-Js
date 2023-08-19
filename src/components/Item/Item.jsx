@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const Item = ({ id, name, img, price, stock }) => {
 
     return (
@@ -8,7 +10,7 @@ export const Item = ({ id, name, img, price, stock }) => {
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} height={250} className="" ItemImg />
+                <img src={img} alt={name} height={250} className="ItemImg"  />
             </picture>
             <section>
                 <p className="Info">
@@ -19,7 +21,7 @@ export const Item = ({ id, name, img, price, stock }) => {
                 </p>
             </section>
             <footer className="ItemFooter">
-                <button className="Option">Ver detalle</button>
+                <Link to={`/item/${id}`} className="Option">Ver detalle</Link>
             </footer>
         </article>
     )

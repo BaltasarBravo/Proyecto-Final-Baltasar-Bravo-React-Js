@@ -8,7 +8,7 @@ const firebaseConfig = {
   storageBucket: import.meta.env.VITE_FBS_BUCKET,
   messagingSenderId: import.meta.env.VITE_FBS_SENDER_ID,
   appId: import.meta.env.VITE_FBS_APP_ID,
-}
+};
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
